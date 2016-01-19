@@ -25,7 +25,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <nav class="navbar navbar-inverse navbar-fixed-top ">
-        <div class="container principal" style=" background-color:#222222">
+        <div class="container principal color-nav">
             <div class="col-lg-12 col-sm-12 col-xs-12">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -34,9 +34,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img style="margin-top:10px;" src="../images/Logo-Ventickets-Blanco.png" class="img-responsive center-block" />
+                    <img src="../images/Logo-Ventickets-Blanco.png" class="img-responsive center-block margen-superior" />
                 </div>
-                <div id="navbar" class="collapse navbar-collapse fuente">
+                <div id="navbar" class="collapse navbar-collapse ">
                     <div class="text-right ">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#about">PRODUCTORES</a></li>
@@ -44,7 +44,7 @@
                             <li><a href="#about">CATEGORIAS</a></li>
                             <li>
                                 <span>
-<button id="enviar" type="submit"  class="btn btn-warning one"  style="background:transparent;  color:#FF9D00;">INGRESA</button>
+<button id="enviar" type="submit"  class="btn btn-warning boton-ingresar">INGRESA</button>
 </span>
                             </li>
                         </ul>
@@ -55,29 +55,30 @@
         </div>
     </nav>
     <div class="container principal ">
-        <div class="row " style="margin-top:80px;">
+        <div class="row bajar80 " >
             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                 <img src="../images/Bitmap1.png" class="img-responsive center-block detalle">
             </div>
-           <!--/.nav-collapse  <div id="detalle" class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-            </div>-->
+            <div id="detalle" class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+        
+            </div>
         </div>
         <div class="row visible-lg ">
             <div class="col-lg-4 bajar opacidad">
-                <img style="  width:335px; height:140px; " src="../images/tira.png">
+                <img class="fotos-lugar" src="../images/tira.png">
             </div>
             <div class="col-lg-4 bajar opacidad">
-                <img style="width:335px;height:140px; " src="../images/tira.png">
+                <img class="fotos-lugar" src="../images/tira.png">
             </div>
             <div class="col-lg-4 bajar opacidad">
-                <img style="width:335px;height:140px; " src="../images/tira.png">
+                <img class="fotos-lugar" src="../images/tira.png">
             </div>
         </div>
         <div id="asientos" class="row bajar ">
             <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="panel panel-default" style=" height: 595px;">
+                <div class="panel panel-default alto-panel" >
                     <div>
-                        <p style="background-color:black; width: 320px; padding-left:10px;color:white;" class="titulos bajar">SELECCIONE EL LUGAR</p>
+                        <p class="titulos bajar selecclugar">SELECCIONE EL LUGAR</p>
                     </div>
                     <div class="bajar"> <img src="../images/lugar.png" class="img-responsive center-block"></div>
                 </div>
@@ -109,10 +110,10 @@
                                     <label>
                                         <input type="radio" id="libres" value="opcion_1">Libres
                                     </label>
-                                    <label style="margin-left:20px;">
+                                    <label class="derecha20">
                                         <input type="radio" id="ocupados" value="opcion_2">Ocupados
                                     </label>
-                                    <label style="margin-left:10px;">
+                                    <label class="derecha10">
                                         <input type="radio" id="asignados" value="opcion_3">Asignados
                                     </label>
                                 </div>
@@ -123,7 +124,7 @@
                         </div>
                         <table class="table table-hover">
                             <tbody>
-                                <tr style="background:#EFEFEF;">
+                                <tr class="color-tabla">
                                     <td>ZONA</td>
                                     <td>ASIENTO</td>
                                     <td>PRECIO</td>
@@ -144,17 +145,17 @@
                             </tbody>
                         </table>
                         <div class="text-right">
-                            <button id="continuar" type="submit" class="btn btn boton fa ">CONTINUAR </button>
+                            <button id="continuar" type="submit" class="btn boton ">CONTINUAR </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="login" style="display:none;" class="row bajar ">
-            <div class="col-lg-6 col-md-6 col-sm-6 ">
-                <div class="panel panel-default hidden-xs" style=" height: 595px;">
+        <div id="login"  class="row bajar ocultar-div ">
+            <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+                <div class="panel panel-default alto-panel" >
                     <div>
-                        <p style="background-color:black; width: 320px; padding-left:10px;color:white;" class="titulos bajar">SELECCIONE EL LUGAR</p>
+                        <p class="titulos bajar selecclugar">SELECCIONE EL LUGAR</p>
                     </div>
                     <div class="bajar"> <img src="../images/lugar.png" class="img-responsive center-block"></div>
                 </div>
@@ -177,7 +178,7 @@
                                 <input type="radio" name="opciones" id="opciones_2" value="opcion_2">Realice su Pago
                             </label>
                         </div>
-                        <div class="bajar" style="margin-left:30px;">
+                        <div class="bajar derecha30" >
                             <p class="titulos">Ingrese sus Datos</p>
                         </div>
                         <div class="bajar panel-datos">
@@ -185,26 +186,26 @@
                                 <label>Email</label>
                             </div>
                             <div>
-                                <input class="inputt" type="email" name="email_r">
+                                <input class="inputt" type="email" name="email">
                             </div>
                             <div class="bajar">
                                 <label>Contraseña</label>
                             </div>
                             <div>
-                                <input class="inputt" type="email" name="email_r">
+                                <input class="inputt" type="email" name="contraseña">
                             </div>
                         </div>
                         <div class="bajar text-right">
-                            <button id="ingresar" type="submit" class="btn btn boton fa">Ingresar</button>
+                            <button id="ingresar" type="submit" class="btn boton ">Ingresar</button>
                         </div>
-                        <div class="text-center" style=" margin-top:20px;">
+                        <div class="text-center bajar20" >
                             <button type="button" class=" btn-link">Olvide mi Contraseña</button>
                             <button id="registrarme" type="button" class="btn-link">Registrarme</button>
                         </div>
                         <div>
                             <table class="table table-hover bajar">
                                 <tbody>
-                                    <tr style="background:#EFEFEF;">
+                                    <tr  class="color-tabla">
                                         <td>ZONA</td>
                                         <td>ASIENTO</td>
                                         <td>PRECIO</td>
@@ -229,11 +230,11 @@
                 </div>
             </div>
         </div>
-        <div id="registrar" style="display:none;" class="row bajar ">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="panel panel-default hidden-xs" style=" height: 595px;">
+        <div id="registrar"  class="row bajar ocultar-div ">
+            <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+                 <div class="panel panel-default alto-panel" >
                     <div>
-                        <p style="background-color:black; width: 320px; padding-left:10px;color:white;" class="titulos bajar">SELECCIONE EL LUGAR</p>
+                        <p class="titulos bajar selecclugar">SELECCIONE EL LUGAR</p>
                     </div>
                     <div class="bajar"> <img src="../images/lugar.png" class="img-responsive center-block"></div>
                 </div>
@@ -243,20 +244,20 @@
                     <div class="panel-body">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="opciones" id="opciones_2" value="opcion_2">Seleccione sus Asientos
+                                <input type="radio" name="asientos" id="asientos" value="opcion_1">Seleccione sus Asientos
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="opciones" id="opciones_2" value="opcion_2">Ingrese sus datos
+                                <input type="radio" name="datos" id="datos" value="opcion_2">Ingrese sus datos
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="opciones" id="opciones_2" value="opcion_2">Realice su Pago
+                                <input type="radio" name="pago" id="pago" value="opcion_3">Realice su Pago
                             </label>
                         </div>
-                        <div class="bajar" style="margin-left:30px;">
+                        <div class="bajar derecha30" >
                             <p class="titulos">Datos Personales</p>
                         </div>
                         <div class="bajar panel-datos">
@@ -264,22 +265,22 @@
                                 <label>Nombre</label>
                             </div>
                             <div>
-                                <input class="inputt" type="email" name="email_r">
+                                <input class="inputt" type="email" name="nombre">
                             </div>
                             <div class="bajar">
                                 <label>Apellido</label>
                             </div>
                             <div>
-                                <input class="inputt" type="email" name="email_r">
+                                <input class="inputt" type="email" name="apellido">
                             </div>
                             <div class="bajar">
                                 <label>Sexo</label>
                             </div>
                             <div>
-                                <input class="inputt" type="email" name="email_r">
+                                <input class="inputt" type="email" name="sexo">
                             </div>
                         </div>
-                        <div class="bajar" style="margin-left:30px;">
+                        <div class="bajar derecha30" >
                             <p class="titulos">Datos Ingreso</p>
                         </div>
                         <div class="bajar panel-datos">
@@ -287,13 +288,13 @@
                                 <label>Email</label>
                             </div>
                             <div>
-                                <input class="inputt" type="email" name="email_r">
+                                <input class="inputt" type="email" name="emai">
                             </div>
                             <div class="bajar">
                                 <label>Contraseña</label>
                             </div>
                             <div>
-                                <input class="inputt" type="email" name="email_r">
+                                <input class="inputt" type="email" name="contraseña">
                             </div>
                         </div>
                         <div class="bajar text-right">
@@ -303,11 +304,11 @@
                 </div>
             </div>
         </div>
-        <div id="editar" style="display:none;" class="row bajar ">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <div class="panel panel-default hidden-xs" style=" height: 595px;">
+        <div id="editar" class="row bajar ocultar-div ">
+            <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+                 <div class="panel panel-default alto-panel" >
                     <div>
-                        <p style="background-color:black; width: 320px; padding-left:10px;color:white;" class="titulos bajar">SELECCIONE EL LUGAR</p>
+                        <p class="titulos bajar selecclugar">SELECCIONE EL LUGAR</p>
                     </div>
                     <div class="bajar"> <img src="../images/lugar.png" class="img-responsive center-block"></div>
                 </div>
@@ -317,60 +318,60 @@
                     <div class="panel-body">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="opciones" id="opciones_2" value="opcion_2">Seleccione sus Asientos
+                                <input type="radio" name="s_asientos" id="s_asientos" value="opcion_1">Seleccione sus Asientos
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="opciones" id="opciones_2" value="opcion_2">Ingrese sus datos
+                                <input type="radio" name="i_datos" id="i_datos" value="opcion_2">Ingrese sus datos
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" name="opciones" id="opciones_2" value="opcion_2">Realice su Pago
+                                <input type="radio" name="pago" id="pago" value="opcion_3">Realice su Pago
                             </label>
                         </div>
-                        <div class="bajar" style="margin-left:30px;">
+                        <div class="bajar derecha30" >
                             <p class="titulos">Datos Personales</p>
                         </div>
                         <div class="row">
-                            <div class="col-lg-4 col-md-5 col-sm-5" style="padding-left:100px;">
+                            <div class="col-lg-4 col-md-5 col-sm-5 col-xs-5 derecha100" >
                                 <div>
                                     <label>Nombre</label>
                                 </div>
-                                <div style="margin-top:5px;">
+                                <div class="bajar5">
                                     <label>Apellido</label>
                                 </div>
-                                <div style="margin-top:5px;">
+                                <div class="bajar5">
                                     <label>Sexo</label>
                                 </div>
-                                <div style="margin-top:5px;">
+                                <div class="bajar5">
                                     <label>Email</label>
                                 </div>
                             </div>
-                            <div class="col-lg-8 col-md-7 col-sm-7">
+                            <div class="col-lg-8 col-md-7 col-sm-7 col-xs-7 leer-datosperson">
                                 <div>
-                                    <input type="text" name="email_r" readonly="true" style="border:none;">
+                                    <input  class="leer-datosperson" type="text" name="nombre" readonly="true" >
                                 </div>
-                                <div style="margin-top:5px;">
-                                    <input type="text" name="email_r" readonly="true" style="border:none;">
+                                <div >
+                                    <input  class="leer-datosperson bajar8"  type="text" name="apellido" readonly="true" >
                                 </div>
-                                <div style="margin-top:5px;">
-                                    <input type="text" name="email_r" readonly="true" style="border:none;">
+                                <div >
+                                    <input  class="leer-datosperson bajar8"type="text" name="sexo" readonly="true" >
                                 </div>
-                                <div style="margin-top:5px;">
-                                    <input type="text" name="email_r" readonly="true" style="border:none;">
+                                <div >
+                                    <input  class="leer-datosperson bajar8" type="text" name="email" readonly="true">
                                 </div>
                             </div>
                         </div>
-                        <div class="text-center" style=" margin-top:20px;">
+                        <div class="text-center bajar20">
                             <button type="button" class=" btn-link">Editar Informacion</button>
                             <button type="button" class=" btn-link">Esta no es mi Cuenta</button>
                         </div>
                         <div>
                             <table class="table table-hover bajar">
                                 <tbody>
-                                    <tr style="background:#EFEFEF;">
+                                    <tr  class="color-tabla">
                                         <td>ZONA</td>
                                         <td>ASIENTO</td>
                                         <td>PRECIO</td>
@@ -399,45 +400,37 @@
     <div class="container-fluid principal-fin bajar ">
         <div class="margenes">
             <div class="row ">
-                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12  bajar ">
-                    <p class="datos "><i class="fa fa-map-marker fa-3x  fab"></i> Puntos de Venta:</p>
-                    <div class="text-justify"> <span> stretch out our arms farther... And then one
-                 fine morning— So we beat on, boats against the current, 
-                 borne back ceaselessly into the past the current, borne 
-                 back ceaselessly into the past.</span></div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 bajar ">
-                    <p class="datos "><i class="fa fa-mobile fa-3x  fab"></i> Numeros de Contacto:</p>
-                    <p> (0416)5335323</p>
-                    <p> (0416)5335323</p>
-                    <p> (0416)5335323</p>
-                    <div>
-                        <p class="datos"><i class="fa fa-envelope-o fa-2x  fab"></i> Correo Electronico:</p>
-                        <p> ghsgjgg@gmail.com</p>
-                    </div>
-                </div>
+               <div id="puntos" class="col-md-6 col-lg-6 col-sm-6 col-xs-12  bajar ">
+                   
+        </div>
+        <div id="correo" class="col-md-6 col-lg-6 col-sm-6 col-xs-12 bajar ">
+            
+            <div id="numeros">
+                
+            </div>
+        </div>
             </div>
             <div class="row">
                 <div class="hidden-xs clientes">
                     <h6 class="text-center">¿QUE DICEN NUESTROS CLIENTES DE NOSOTROS?</h6> </div>
             </div>
-            <div class="row bajar">
-                <div class="col-lg-4 col-md-4 col-sm-6 ">
-                    <div class="hidden-xs">
-                        <img src="../images/homer.png" class="img-responsive img-circle center-block" />
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 ">
-                    <div class="hidden-xs">
-                        <img src="../images/homer.png" class="img-responsive img-circle center-block" />
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 ">
-                    <div class="visible-lg">
-                        <img src="../images/homer.png" class="img-responsive img-circle center-block" />
-                    </div>
-                </div>
+             <div class="row bajar">
+        <div class="col-lg-4 col-md-4 col-sm-6 ">
+            <div class="hidden-xs">
+                <img src="../images/1.jpeg" class="img-responsive img-circle center-block foto" />
             </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 ">
+            <div class="hidden-xs">
+                <img src="../images/2.jpeg" class="img-responsive img-circle center-block foto" />
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 ">
+            <div class="visible-lg">
+                <img src="../images/3.jpeg" class="img-responsive img-circle center-block foto" />
+            </div>
+        </div>
+    </div>
             <div class="row bajar">
                 <div class="col-lg-4 col-md-4 col-sm-6 ">
                     <div class="hidden-xs">
@@ -462,7 +455,7 @@
     </div>
     <div class="container-fluid">
         <div class="row font-negro">
-            <div class="col-md-3 col-lg-3  col-sm-3 col-xs-12  fa  pie text-center  bajar" style=" padding-left:10px">
+            <div class="col-md-3 col-lg-3  col-sm-3 col-xs-12  fa  pie text-center  bajar" >
                 <div class="bajar subir-text">
                     <p>Servicios </p>
                     <p>Tikets </p>
@@ -473,7 +466,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 eventoprincipal fa font-negro pie text-center contenedor bajar" style=" padding-left:10px">
+            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12 fa  contenedor bajar" >
                 <div class="bajar local-text ">
                     <p>Musica </p>
                     <p>Teatro </p>
@@ -484,15 +477,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-lg-3  col-sm-3 col-xs-12 eventoprincipal fa font-negro pie text-center contenedor bajar" style=" padding-left:10px">
-                <div class="bajar local" style="margin-top:40px">
+            <div class="col-md-3 col-lg-3  col-sm-3 col-xs-12  contenedor bajar" >
+                <div class="local bajar40  " >
                     <img class="desplazada" src="../images/Iconos/twitter.png" />
                     <img class="desplazada" src="../images/Iconos/Facebook.png" />
                     <img class="desplazada" src="../images/Iconos/Correo.png" />
                     <img class="desplazada" src="../images/Iconos/Instagram.png" />
                 </div>
-                <div class="hidden-xs">
-                    <div class=" divider-white-vertical" style="margin-top:-55px   ">
+                 <div class="hidden-xs">
+                    <div class=" divider-white-vertical divisor">
                     </div>
                 </div>
             </div>
@@ -502,7 +495,7 @@
                     </div>
                 </div>
             </div>
-            <div class=" col-md-3 col-lg-3  col-sm-3 col-xs-12 eventoprincipal fa font-negro pie text-center contenedor bajar" style=" padding-left:10px">
+            <div class=" col-md-3 col-lg-3  col-sm-3 col-xs-12 fa  contenedor bajar" >
                 <div class="bajar subir-pie">
                     <p>Puntos de Venta </p>
                     <p>Numeros de Contacto </p>
@@ -515,27 +508,43 @@
             </div>
             <div class="text-center hidden-xs">
                 <img src="../images/Logo-Ventickets-Blanco.png" />
-                <p>Copyright 2015 todos los derechos reservados</p>
+                <p >Copyright 2015 todos los derechos reservados</p>
             </div>
         </div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script id="detalleTemplate" type="text/x-handlebars-template">
         <div>
-            <p class="titulos">{{titulo}}</p>
+            <p id="titulo" class="titulos">{{titulo}}</p>
         </div>
-        <div class="text-justify"> <span> {{descripcion}}</span></div>
-        <div class="centrar" style="margin-top:60px;">
+        <div id="descripcion" class="text-justify"> <span> {{descripcion}}</span></div>
+        <div class="centrar bajar60">
             <div>
-                <p class="informacion"><i class="fa fa-calendar-check-o fa-1x faa " style="margin-right:10px;"></i>{{fecha}}</p>
-                <p class="informacion"><i class="fa fa-map-marker fa-1x faa " style="margin-right:15px;"></i>{{direccion}}</p>
-                <p class="informacion" style="margin-right:5px;"><i class="fa fa-clock-o fa-1x faa " style="margin-right:10px;"></i>{{hora}}</p>
+                <p id="fecha" class="informacion"><i class="fa fa-calendar-check-o fa-1x faa " style="margin-right:10px;"></i>{{fecha}}</p>
+                <p id="direccion" class="informacion"><i class="fa fa-map-marker fa-1x faa " style="margin-right:15px;"></i>{{direccion}}</p>
+                <p id="hora" class="informacion" style="margin-right:5px;"><i class="fa fa-clock-o fa-1x faa " style="margin-right:10px;"></i>{{hora}}</p>
                 <img class="iconos-redes" src="../images/Facebook-black.png" class="img-responsive center-block" />
                 <img class="iconos-redes" src="../images/Twitter-black.png" style=" padding-left:10px" />
                 <img class="iconos-redes" src="../images/Instagram-black.png" style=" padding-left:10px" />
             </div>
         </div>
     </script>
+    <script id="puntostemplate" type="text/x-handlebars-template">
+
+         
+                    <p class="datos "><i class="fa fa-map-marker fa-3x  fab"></i> {{puntos}}:</p>
+                    <div class="text-justify"> <span> {{descripcion}}</span></div>
+            </script>
+            <script id="numerostemplate" type="text/x-handlebars-template">
+                <p class="datos "><i class="fa fa-mobile fa-3x  fab"></i> {{numeros}}:</p>
+                <p> {{numone}}</p>
+                <p> {{numtwo}}</p>
+                <p> {{numthree}}</p>
+            </script>
+            <script id="correotemplate" type="text/x-handlebars-template">
+                <p class="datos"><i class="fa fa-envelope-o fa-2x  fab"></i> {{correo}}:</p>
+                <p> {{direccion}}</p>
+            </script>
     <script>
     (function(b, o, i, l, e, r) {
         b.GoogleAnalyticsObject = l;
