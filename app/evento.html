@@ -59,9 +59,11 @@
             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
                 <img src="../images/Bitmap1.png" class="img-responsive center-block detalle">
             </div>
+            
             <div id="detalle" class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
         
             </div>
+            
         </div>
         <div class="row visible-lg ">
             <div class="col-lg-4 bajar opacidad">
@@ -514,8 +516,9 @@
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script id="detalleTemplate" type="text/x-handlebars-template">
-        <div>
-            <p id="titulo" class="titulos">{{titulo}}</p>
+        <form action="evento.html" id="formdetalle" role="form">
+        <div >
+            <p id="titulo"  class="titulos">{{titulo}}</p>
         </div>
         <div id="descripcion" class="text-justify"> <span> {{descripcion}}</span></div>
         <div class="centrar bajar60">
@@ -528,6 +531,7 @@
                 <img class="iconos-redes" src="../images/Instagram-black.png" style=" padding-left:10px" />
             </div>
         </div>
+          </form>
     </script>
     <script id="puntostemplate" type="text/x-handlebars-template">
 

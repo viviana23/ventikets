@@ -209,7 +209,7 @@
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script id="eventTemplate" type="text/x-handlebars-template">
-         <form action="evento.html" id="testform" role="form">
+        
             <div class="col-lg-4 col-md-4 col-sm-4 ">
                 <div class=" bajar desenfoque">
                     <img src="{{blured}}" class="img-responsive center-block entrada" />
@@ -217,21 +217,22 @@
                 <div>
                     <img src="{{featured}}" class="evento " />
                 </div>
+               <input type="hidden" id="oculta" name="oculta" value="8">
                 <div class="subir-entrada relativo derecha10">
                     <div class="vive ">
                         <h1>{{nombre}}</h1></div>
                     <div>
-                        <p class="informacion "><i class="fa fa-calendar-check-o fa-1x faa izquierda10"></i>{{fecha}}</p>
+                        <p id="aja" class="informacion "><i class="fa fa-calendar-check-o fa-1x faa izquierda10"></i>{{fecha}}</p>
                         <p class="informacion"><i class="fa fa-map-marker fa-1x faa izquierda15"></i>{{direccion}}</p>
                         <p class="informacion"><i class="fa fa-clock-o fa-1x faa izquierda10"></i>{{hora}}</p>
                         <img  src="../images/Facebook.png" />
                         <img class=" panel10" src="../images/Twitter.png" />
                         <img class="panel10" src="../images/Instagram.png" />
-                        <button id="only" type="submit" class="btn boton ">VER EVENTO</button>
+                        <button id="{{id}}" type="submit" data-toggle="modal" class="btn boton edit_button ">VER EVENTO</button>
                     </div>
                 </div>
             </div>
-        </form>
+      
     </script>
     <script id="hoyTemplate" type="text/x-handlebars-template">
         <form action="evento.html" id="testform" role="form">

@@ -61,16 +61,70 @@ $.getJSON("eventos.json", function(data) {
     });
 
 });
+//mostrar detalle del evento en evento.html
 
-$(document).on("click","#only",function(evt){
-   $.getJSON("eventos.json", function(data) {
+var idaux=-1;
+    $(document).on("click", '.edit_button', function(evt) {
+alert("holaaaaa");
+
+window.location.href='evento.html?id='+this.id;
+  });
+
+$.getJSON("eventos.json", function(data) {
+     var $_GET = {};
+
+document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+    function decode(s) {
+        return decodeURIComponent(s.split("+").join(" "));
+    }
+
+    $_GET[decode(arguments[1])] = decode(arguments[2]);
+});
+
+alert($_GET["id"]);
+
+
+    var source = $("#detalleTemplate").html();
+    alert("porsi");
+      $.each(data.eventos, function(key, val) {
+         console.log(val.id);
+         if(val.id==$_GET["id"]){
+            alert("entroooooo " +val.id+" "+val.nombre+" "+this.id+" "+$_GET["id"] );
+var template = Handlebars.compile(source);
+var html = template(val);
+        $("#detalle").append(html);
+         }
+        
  
-    $.each(data, function(key, val) {
-        console.log(html);
-  $("#detalleTemplate #titulo").val( $(this).data( "nombre" ) );
+  });  
+        });
+
+
+/*
+$.getJSON("eventos.json", function(data) {
+    var source = $("#detalleTemplate").html();
+    
+      $.each(data.eventos, function(key, val) {
+         console.log(html);
+         if(val.id==this.id){
+var template = Handlebars.compile(source);
+
+         }
+        var html = template(val);
+        $("#detalle").append(html);
+ 
+  });  
+        });
+
+windows.location.href='evento.html';
+
+$(document).on("click", '.edit_button', function(evt) {
+  
+  alert(this.id);
+    alert("holaaaaa");
 });
-});
-});
+
+*/
 
 //mostrar u ocultar paneles en evento.html//
 

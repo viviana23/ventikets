@@ -3,6 +3,8 @@
             "id": 1,
             "available": true,
             "today": false,
+            "titulo": "TÍPIC Lorem ipsum dolor sit amet, consect.",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin orci elit. Pellentesque sed malesuada quam. Nulla sed magna sed metus euismod tempus. Quisque et arcu at odio imperdiet laoreet. Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum..",
             "nombre": "VIVE 88000000",
             "fecha": "Jueves 22 de octubre",
             "direccion": "Casino Militar - La Grita,Tachira",
@@ -13,6 +15,8 @@
             "id": 2,
             "available": false,
             "today": true,
+            "titulo": "TÍPIC Lorem ipsum dolor sit amet, consect.",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin orci elit. Pellentesque sed malesuada quam. Nulla sed magna sed metus euismod tempus. Quisque et arcu at odio imperdiet laoreet. Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum..",
             "nombre": "VIVE 77777",
             "fecha": "Jueves 22 de octubre",
             "direccion": "Casino Militar - La Grita,Tachira",
@@ -21,6 +25,18 @@
             "blured": "images/entrada1.jpeg"
         }, {
             "id": 3,
+            "available": false,
+            "today": false,
+            "titulo": "TÍPIC Lorem ipsum dolor sit amet, consect.",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin orci elit. Pellentesque sed malesuada quam. Nulla sed magna sed metus euismod tempus. Quisque et arcu at odio imperdiet laoreet. Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum..",
+            "nombre": "VIVE 40",
+            "fecha": "Jueves 22 de octubre",
+            "direccion": "Casino Militar - La Grita,Tachira",
+            "hora": "10:00 pm",
+            "featured": "images/Bitmap1.png",
+            "blured": "images/entrada1.jpeg"
+        },{
+            "id": 4,
             "available": false,
             "today": false,
             "titulo": "TÍPIC Lorem ipsum dolor sit amet, consect.",
