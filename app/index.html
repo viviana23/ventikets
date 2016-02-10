@@ -73,7 +73,7 @@
     </header>
     <div class="container-fluid principal">
         <div class="row">
-            <div class="col-lg-10 col-md-10 col-sm-10  text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12  text-center">
                 <div class="visible-lg bajar">
                     <img src="../images/taylor1.png" class="img-responsive center-block cabecera" />
                 </div>
@@ -208,19 +208,39 @@
         </div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script id="eventTemplate" type="text/x-handlebars-template">
-        
-            <div class="col-lg-4 col-md-4 col-sm-4 ">
+ <script id="eventTemplate" type="text/x-handlebars-template">
+ {{#if available}}
+               <div class="col-lg-4 col-md-4 col-sm-4 opacidad2">
+               {{else}}
+                <div class="col-lg-4 col-md-4 col-sm-4 ">
+                  {{/if}}
                 <div class=" bajar desenfoque">
                     <img src="{{blured}}" class="img-responsive center-block entrada" />
                 </div>
                 <div>
                     <img src="{{featured}}" class="evento " />
                 </div>
-               <input type="hidden" id="oculta" name="oculta" value="8">
+              {{#if today}}
+                <div>
+                    <img class="status relativo" src="../images/hoy.png">
+                </div>
+                {{else if available}}
+                <div>
+                    <img class="status relativo" src="../images/agotado.png">
+                </div>
+                {{/if}}
                 <div class="subir-entrada relativo derecha10">
+                {{#if available }}
+                <div class="hoy">
+                 <h2>{{nombre}}</h2></div>
+                  {{else if today}}
+                  <div class="hoy">
+                 <h2>{{nombre}}</h2></div>
+                {{else}}
                     <div class="vive ">
-                        <h1>{{nombre}}</h1></div>
+                    <h1>{{nombre}}</h1></div>
+                    {{/if}}
+                        
                     <div>
                         <p id="aja" class="informacion "><i class="fa fa-calendar-check-o fa-1x faa izquierda10"></i>{{fecha}}</p>
                         <p class="informacion"><i class="fa fa-map-marker fa-1x faa izquierda15"></i>{{direccion}}</p>
@@ -232,64 +252,9 @@
                     </div>
                 </div>
             </div>
-      
+          
     </script>
-    <script id="hoyTemplate" type="text/x-handlebars-template">
-        <form action="evento.html" id="testform" role="form">
-            <div class="col-lg-4 col-md-4 col-sm-4 ">
-                <div class=" bajar desenfoque">
-                    <img src="{{blured}}" class="img-responsive center-block entrada" />
-                </div>
-                <div>
-                    <img src="{{featured}}" class="evento " />
-                </div>
-                <div>
-                    <img class="status relativo" src="../images/hoy.png">
-                </div>
-                <div class="subir-entrada relativo derecha10">
-                    <div class="hoy">
-                        <h2>{{nombre}}</h2></div>
-                    <div>
-                        <p class="informacion "><i class="fa fa-calendar-check-o fa-1x faa izquierda10"></i>{{fecha}}</p>
-                        <p class="informacion"><i class="fa fa-map-marker fa-1x faa izquierda15"></i>{{direccion}}</p>
-                        <p class="informacion"><i class="fa fa-clock-o fa-1x faa izquierda10"></i>{{hora}}</p>
-                        <img  src="../images/Facebook.png" />
-                        <img class="panel10" src="../images/Twitter.png" />
-                        <img class=" panel10" src="../images/Instagram.png" />
-                        <button id="hoy" type="submit" class="btn boton ">VER EVENTO</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </script>
-    <script id="agotadoTemplate" type="text/x-handlebars-template">
-        <form action="evento.html" id="testform" role="form">
-            <div class="col-lg-4 col-md-4 col-sm-4 opacidad2">
-                <div class="  bajar desenfoque">
-                    <img src="{{blured}}" class="img-responsive center-block entrada" />
-                </div>
-                <div>
-                    <img src="{{featured}}" class="evento " />
-                </div>
-                <div>
-                    <img class="status relativo" src="../images/agotado.png">
-                </div>
-                <div class="subir-entrada relativo derecha10">
-                    <div class="hoy">
-                        <h2>{{nombre}}</h2></div>
-                    <div>
-                        <p class="informacion "><i class="fa fa-calendar-check-o fa-1x faa izquierda10"></i>{{fecha}}</p>
-                        <p class="informacion"><i class="fa fa-map-marker fa-1x faa izquierda15"></i>{{direccion}}</p>
-                        <p class="informacion"><i class="fa fa-clock-o fa-1x faa izquierda10"></i>{{hora}}</p>
-                        <img  src="../images/Facebook.png" />
-                        <img class="panel10" src="../images/Twitter.png" />
-                        <img class=" panel10" src="../images/Instagram.png" />
-                        <button id="agotado" type="submit" class="btn boton ">VER EVENTO</button>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </script>
+   
     <script id="moviltemplate" type="text/x-handlebars-template">
         <div class="col-sm-6 col-xs-6 ">
             <div>
@@ -301,7 +266,7 @@
                 <img class="redes-movil" src="../images/Instagram-black.png" />
             </div>
         </div>
-        <form action="evento.html" id="testform" role="form">
+       
             <div class="col-sm-6 col-xs-6 padding5">
                 <div class="showInfo">
                     <h3>{{nombre}}</h3></div>
@@ -309,10 +274,10 @@
                     <p><i class="fa fa-calendar-check-o faa derecha5"></i> {{fecha}}</p>
                     <p><i class="fa fa-map-marker  faa derecha5"></i> {{direccion}}</p>
                     <p><i class="fa fa-clock-o faa"></i> {{hora}}</p>
-                    <button type="submit" class=" btn boton bajar-boton">Ver Evento </button>
+                    <button id="{{id}}" type="submit" class=" btn boton bajar-boton edit_button">Ver Evento </button>
                 </div>
             </div>
-        </form>
+       
          <div class="row visible-xs">
             <div class="col-xs-11 divider"></div>
         </div>

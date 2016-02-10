@@ -39,7 +39,7 @@
         max-width: 934px;
     }
     /*! imagen fecha-hora-lugar en evento.html*/
-    
+   
     img.detalle {
         width: 100%;
         height: 100%;
@@ -157,6 +157,9 @@
     .izquierda15 {
         margin-right: 15px;
     }
+    .izquierda5 {
+        margin-right: 5px;
+    }
     /*! */
     
     img.panel10 {
@@ -221,7 +224,7 @@
     }
     
     .informacion {
-        color: black;
+        color: white;
         font-size: 16px;
     }
     
@@ -281,11 +284,16 @@
         color: #8E8383;
     }
     
-    .datos {
-        color: black;
+    .detalles{
+color: black;
         font-size: 16px;
+
+    }
+    .datos {
+        @extend .detalles;
         font-weight: bold;
     }
+
     
     .showInfo h3 {
         font-size: 12px;

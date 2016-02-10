@@ -1,5 +1,7 @@
 $.getJSON("eventos.json", function(data) {
     console.log(data);
+     var defaulttemplate = $("#eventTemplate").html();
+   /*
     var today = $("#hoyTemplate").html();
     var notavailable = $("#agotadoTemplate").html();
     var defaulttemplate = $("#eventTemplate").html();
@@ -14,7 +16,13 @@ $.getJSON("eventos.json", function(data) {
             var template = Handlebars.compile(defaulttemplate);
 
         }
+*/
+
+$.each(data.eventos, function(key, val) {
+
+var template = Handlebars.compile(defaulttemplate);
         var html = template(val);
+        console.log(html)
         $("#eventos").append(html);
 
 
@@ -61,11 +69,13 @@ $.getJSON("eventos.json", function(data) {
     });
 
 });
+
+
 //mostrar detalle del evento en evento.html
 
-var idaux=-1;
+
     $(document).on("click", '.edit_button', function(evt) {
-alert("holaaaaa");
+
 
 window.location.href='evento.html?id='+this.id;
   });
@@ -81,18 +91,19 @@ document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
     $_GET[decode(arguments[1])] = decode(arguments[2]);
 });
 
-alert($_GET["id"]);
-
-
     var source = $("#detalleTemplate").html();
-    alert("porsi");
+   
       $.each(data.eventos, function(key, val) {
          console.log(val.id);
          if(val.id==$_GET["id"]){
-            alert("entroooooo " +val.id+" "+val.nombre+" "+this.id+" "+$_GET["id"] );
+       
 var template = Handlebars.compile(source);
 var html = template(val);
         $("#detalle").append(html);
+        
+        
+
+
          }
         
  
@@ -100,31 +111,6 @@ var html = template(val);
         });
 
 
-/*
-$.getJSON("eventos.json", function(data) {
-    var source = $("#detalleTemplate").html();
-    
-      $.each(data.eventos, function(key, val) {
-         console.log(html);
-         if(val.id==this.id){
-var template = Handlebars.compile(source);
-
-         }
-        var html = template(val);
-        $("#detalle").append(html);
- 
-  });  
-        });
-
-windows.location.href='evento.html';
-
-$(document).on("click", '.edit_button', function(evt) {
-  
-  alert(this.id);
-    alert("holaaaaa");
-});
-
-*/
 
 //mostrar u ocultar paneles en evento.html//
 

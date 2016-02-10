@@ -516,22 +516,21 @@
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script id="detalleTemplate" type="text/x-handlebars-template">
-        <form action="evento.html" id="formdetalle" role="form">
         <div >
             <p id="titulo"  class="titulos">{{titulo}}</p>
         </div>
         <div id="descripcion" class="text-justify"> <span> {{descripcion}}</span></div>
         <div class="centrar bajar60">
             <div>
-                <p id="fecha" class="informacion"><i class="fa fa-calendar-check-o fa-1x faa " style="margin-right:10px;"></i>{{fecha}}</p>
-                <p id="direccion" class="informacion"><i class="fa fa-map-marker fa-1x faa " style="margin-right:15px;"></i>{{direccion}}</p>
-                <p id="hora" class="informacion" style="margin-right:5px;"><i class="fa fa-clock-o fa-1x faa " style="margin-right:10px;"></i>{{hora}}</p>
-                <img class="iconos-redes" src="../images/Facebook-black.png" class="img-responsive center-block" />
-                <img class="iconos-redes" src="../images/Twitter-black.png" style=" padding-left:10px" />
-                <img class="iconos-redes" src="../images/Instagram-black.png" style=" padding-left:10px" />
+                <p id="fecha" class="detalles"><i class="fa fa-calendar-check-o fa-1x faa izquierda10 "></i>{{fecha}}</p>
+                <p id="direccion" class="detalles"><i class="fa fa-map-marker fa-1x faa izquierda15" ></i>{{direccion}}</p>
+                <p id="hora" class="detalles" ><i class="fa fa-clock-o fa-1x faa izquierda10" ></i>{{hora}}</p>
+                <img class="iconos-redes " src="../images/Facebook-black.png" class="img-responsive center-block" />
+                <img class="iconos-redes panel10" src="../images/Twitter-black.png"  />
+                <img class="iconos-redes panel10" src="../images/Instagram-black.png"  />
             </div>
         </div>
-          </form>
+       
     </script>
     <script id="puntostemplate" type="text/x-handlebars-template">
 
