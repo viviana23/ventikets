@@ -1,41 +1,30 @@
 $.getJSON("eventos.json", function(data) {
     console.log(data);
      var defaulttemplate = $("#eventTemplate").html();
-   /*
-    var today = $("#hoyTemplate").html();
-    var notavailable = $("#agotadoTemplate").html();
-    var defaulttemplate = $("#eventTemplate").html();
-    $.each(data.eventos, function(key, val) {
-        console.log(val.today)
-        if (val.today) {
-            var template = Handlebars.compile(today);
-
-        } else if (val.available) {
-            var template = Handlebars.compile(notavailable);
-        } else {
-            var template = Handlebars.compile(defaulttemplate);
-
-        }
-*/
-
 $.each(data.eventos, function(key, val) {
-
 var template = Handlebars.compile(defaulttemplate);
         var html = template(val);
         console.log(html)
         $("#eventos").append(html);
-
-
-
     });
 
-    //lugar-fecha-hora del evento en movil//
+//lugar-fecha-hora del evento en movil//
     var onlymovil = $("#moviltemplate").html();
     $.each(data.eventos, function(key, val) {
         console.log(val.today)
         var template = Handlebars.compile(onlymovil);
         var html = template(val);
         $("#eventosmovil").append(html);
+
+    });
+
+//que dicen nuestros clientes//
+ var onlymovil = $("#clientestemplate").html();
+    $.each(data.cliente, function(key, val) {
+        
+        var template = Handlebars.compile(onlymovil);
+        var html = template(val);
+        $("#clientes").append(html);
 
     });
 

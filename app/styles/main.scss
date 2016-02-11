@@ -523,6 +523,7 @@ color: black;
         margin-right: 100px;
     }
     
+
     .desenfoque {
         overflow: hidden;
         -moz-overflow: hidden;
@@ -532,23 +533,33 @@ color: black;
         -o-filter: blur(100px);
         -ms-filter: blur(100px);
         filter: blur(100px);
+
         z-index: -1;
     }
     
     .desenfoque:before {
         -webkit-filter: blur(2px);
+
+-moz-filter: blur(2px); 
+-o-filter: blur(2px); 
+-ms-filter: blur(2px); 
         filter: blur(2px);
         z-index: -1;
     }
     
     // imagen protectora de ancho de pantalla
     header.container-fluid {
+
+
         background-image: url(../images/Bitmap2.png);
+         
         border-image: 0%;
         background-repeat: no-repeat;
         background-size: cover;
         height: 309px;
     }
+
+    
     
     //opacidad oscura de entrada en index.html y de fotografias del evento en evento.html 
     .opacidad,

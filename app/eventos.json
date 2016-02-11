@@ -71,18 +71,6 @@
             "hora": "10:00 pm",
             "featured": "images/Bitmap1.png",
             "blured": "images/entrada1.jpeg"
-        },{
-            "id": 7,
-            "available": false,
-            "today": false,
-            "titulo": "TÍPIC Lorem ipsum dolor sit amet, consect.",
-          "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sollicitudin orci elit. Pellentesque sed malesuada quam. Nulla sed magna sed metus euismod tempus. Quisque et arcu at odio imperdiet laoreet. Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum.Proin posuere malesuada finibus. Phasellus egestas scelerisque tincidunt. Aliquam auctor condimentum rutrum..",
-            "nombre": "VIVE 40",
-            "fecha": "Jueves 30 de octubre",
-            "direccion": "pa donde sea",
-            "hora": "10:00 pm",
-            "featured": "images/Bitmap1.png",
-            "blured": "images/entrada1.jpeg"
         }
             ],
 
@@ -110,6 +98,31 @@
 
         }
 
+    ],
+
+     "cliente": [{
+            "id": 1,
+            "foto": "/images/1.jpeg",
+            "nombre": "Ana Medina",
+            "opinion":" stretch out our arms farther... And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past the current, borne back ceaselessly into the past."
+
+        },{
+            "id": 2,
+            "foto": "/images/2.jpeg",
+            "nombre": "Ana Medina",
+            "opinion":" stretch out our arms farther... And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past the current, borne back ceaselessly into the past."
+
+},
+{
+            "id": 3,
+            "foto": "/images/3.jpeg",
+            "nombre": "Ana Medina",
+            "opinion":" stretch out our arms farther... And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past the current, borne back ceaselessly into the past."
+
+}
     ]
+
+
+
 
 }
