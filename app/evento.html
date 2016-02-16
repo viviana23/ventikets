@@ -401,8 +401,9 @@
     </div>
     <div class="container-fluid principal-fin bajar ">
         <div class="margenes">
-            <div class="row ">
-               <div id="puntos" class="col-md-6 col-lg-6 col-sm-6 col-xs-12  bajar ">
+            <div  class="row ">
+
+<div id="puntos" class="col-md-6 col-lg-6 col-sm-6 col-xs-12  bajar ">
                    
         </div>
         <div id="correo" class="col-md-6 col-lg-6 col-sm-6 col-xs-12 bajar ">
@@ -411,49 +412,18 @@
                 
             </div>
         </div>
-            </div>
-            <div class="row">
-                <div class="hidden-xs clientes">
-                    <h6 class="text-center">¿QUE DICEN NUESTROS CLIENTES DE NOSOTROS?</h6> </div>
-            </div>
-             <div class="row bajar">
-        <div class="col-lg-4 col-md-4 col-sm-6 ">
-            <div class="hidden-xs">
-                <img src="../images/1.jpeg" class="img-responsive img-circle center-block foto" />
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 ">
-            <div class="hidden-xs">
-                <img src="../images/2.jpeg" class="img-responsive img-circle center-block foto" />
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 ">
-            <div class="visible-lg">
-                <img src="../images/3.jpeg" class="img-responsive img-circle center-block foto" />
-            </div>
-        </div>
+
     </div>
-            <div class="row bajar">
-                <div class="col-lg-4 col-md-4 col-sm-6 ">
-                    <div class="hidden-xs">
-                        <p class="text-center datos">Ana Medina</p>
-                        <p class="text-justify  panel-body"> stretch out our arms farther... And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past the current, borne back ceaselessly into the past.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 ">
-                    <div class="hidden-xs">
-                        <p class="text-center datos">Ana Medina</p>
-                        <p class="text-justify  panel-body"> stretch out our arms farther... And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past the current, borne back ceaselessly into the past.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 ">
-                    <div class="visible-lg">
-                        <p class="text-center datos">Ana Medina</p>
-                        <p class="text-justify panel-body"> stretch out our arms farther... And then one fine morning— So we beat on, boats against the current, borne back ceaselessly into the past the current, borne back ceaselessly into the past.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="row">
+        <div class="hidden-xs clientes">
+            <h6 class="text-center">¿QUE DICEN NUESTROS CLIENTES DE NOSOTROS?</h6> </div>
+    </div>
+    <div id="clientes" class="row bajar">
+        
+
+    </div>
+     
+    </div>
     </div>
     <div class="container-fluid">
         <div class="row font-negro">
@@ -547,6 +517,21 @@
             <script id="correotemplate" type="text/x-handlebars-template">
                 <p class="datos"><i class="fa fa-envelope-o fa-2x  fab"></i> {{correo}}:</p>
                 <p> {{direccion}}</p>
+            </script>
+
+            <script id="clientestemplate" type="text/x-handlebars-template">
+
+<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs ">
+            <div>
+                <img src="{{foto}}" class="img-responsive img-circle center-block foto" />
+            </div>
+             <div >
+                        <p class="text-center datos bajar5">{{nombre}}</p>
+                        <p class="text-justify  panel-body">{{opinion}}</p>
+                    </div>
+
+        </div>
+
             </script>
     <script>
     (function(b, o, i, l, e, r) {

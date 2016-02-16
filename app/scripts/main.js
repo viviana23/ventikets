@@ -19,11 +19,11 @@ var template = Handlebars.compile(defaulttemplate);
     });
 
 //que dicen nuestros clientes//
- var onlymovil = $("#clientestemplate").html();
+ var clientes = $("#clientestemplate").html();
+  var template = Handlebars.compile(clientes);
     $.each(data.cliente, function(key, val) {
-        
-        var template = Handlebars.compile(onlymovil);
         var html = template(val);
+        console.log(html)
         $("#clientes").append(html);
 
     });

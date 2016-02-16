@@ -8,31 +8,41 @@
         font-size: 14px !important;
     }
     /*! imagen con blur de ver evento */
+
+@mixin tamaño_imagenes($ancho,$alto,$min-ancho,$min-alto,$max-ancho,$max-alto){
+        width: $ancho; 
+        height: $alto;
+        min-width: $min-ancho;
+        min-height: $min-alto;
+        max-width: $max-ancho;
+        max-height: $max-alto;
+       
+    }
     
     img.entrada {
-        height: 100%;
-        width: 100%;
-        min-width: 300px;
-        min-height: 468px;
-        max-height: 468px;
-        max-width: 300px;
+
+        @include tamaño_imagenes(100%,100%,300px,468px,300px,468px);
+       
     }
+
+
+
     /*! imagen pequeña de ver evento */
+
+    
     
     img.evento {
         position: relative;
         margin-top: -675px;
         margin-left: 8.5px;
-        height: 100%;
-        width: 100%;
-        min-width: 283px;
-        min-height: 280px;
-        max-height: 283px;
-        max-width: 280px;
+        @include tamaño_imagenes(100%,100%,283px,280px,283px,280px);
+        
+      
     }
     /*! imagen   */
     
     img.cabecera {
+        margin-top:30px;
         min-width: 934px;
         min-height: 257px;
         max-height: 257px;
@@ -163,7 +173,7 @@
     /*! */
     
     img.panel10 {
-        padding-left: 10px
+        padding-left: 10px;
     }
     
     img.fotos-lugar {
@@ -381,20 +391,26 @@ color: black;
         margin-right: auto;
     }
     
+
+@mixin icono-footer ($displa,$paddin,$margi,$mar-left,$mar-top){
+
+        display: $displa;
+        padding:$paddin;
+        margin:$margi;
+        margin-left: $mar-left;
+        margin-top:$mar-top;
+
+}
+
     .iconos img {
-        display: inline-block;
-        padding: 0px 12px;
-        margin: 0px 8px;
-        margin-left: 105px;
-        margin-top: -310px;
+        @include icono-footer(inline-block, 0px 12px, 0px 8px,105px,-310px);
+       
     }
     
+
+
     .icono-boton {
-        display: inline-block;
-        padding: 0px 12px;
-        margin: 0px 8px;
-        margin-left: -5px;
-        margin-top: -310px;
+        @include icono-footer(inline-block, 0px 12px, 0px 8px,-5px,-310px);
         background: transparent;
         color: white;
     }
@@ -402,21 +418,15 @@ color: black;
     .panel-datos {
         margin-left: 100px;
     }
-    
+  ///////////////////////////////////////////////////////////////////////7  
     @media all and (max-width: 1200px) {
         .iconos img {
-            display: inline-block;
-            padding: 0px 6px;
-            margin: 0px 2px;
-            margin-left: 80px;
-            margin-top: -310px;
+            @include icono-footer(inline-block, 0px 6px, 0px 2px,80px,-310px);
+           
         }
         .icono-boton {
-            display: inline-block;
-            padding: 0px 6px;
-            margin: 0px 2px;
-            margin-left: 5px;
-            margin-top: -310px;
+          
+             @include icono-footer(inline-block,0px 6px, 0px 2px,5px,-310px);
             background: transparent;
             color: white;
         }
@@ -430,18 +440,12 @@ color: black;
     
     @media all and (max-width: 842px) {
         .iconos img {
-            display: inline-block;
-            padding: 0px 3px;
-            margin: 0px 2px;
-            margin-left: 65px;
-            margin-top: -310px;
+            @include icono-footer(inline-block, 0px 3px, 0px 2px,65px,-310px);
+           
         }
         .icono-boton {
-            display: inline-block;
-            padding: 0px 3px;
-            margin: 0px 2px;
-            margin-left: 5px;
-            margin-top: -310px;
+         
+             @include icono-footer(inline-block, 0px 3px, 0px 2px,5px,-310px);
             background: transparent;
             color: white;
         }
@@ -480,20 +484,16 @@ color: black;
     
     @media all and (max-width: 520px) {
         .iconos img {
-            margin: 0px;
-            padding: 0px;
-            margin-left: 145px;
-            display: block;
+            
+            @include icono-footer(block, 0px, 0px, 145px,-100px);
+            
             float: none;
             text-align: left;
-            margin-top: -100px;
+        
         }
         .icono-boton {
-            display: inline-block;
-            padding: 0px 3px;
-            margin: 0px 2px;
-            margin-left: 195px;
-            margin-top: -60px;
+         
+             @include icono-footer(inline-block, 0px 3px, 0px 2px,195px,-60px);
             background: transparent;
             color: white;
         }
@@ -517,6 +517,10 @@ color: black;
         background-color: #FFFFFF;
  }
     }
+
+
+
+ ///////////////////////////////////////////////////   
     
     .margenes {
         margin-left: 120px;
