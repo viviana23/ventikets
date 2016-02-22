@@ -18,15 +18,7 @@ var template = Handlebars.compile(defaulttemplate);
 
     });
 
-//que dicen nuestros clientes//
- var clientes = $("#clientestemplate").html();
-  var template = Handlebars.compile(clientes);
-    $.each(data.cliente, function(key, val) {
-        var html = template(val);
-        console.log(html)
-        $("#clientes").append(html);
 
-    });
 
 });
 //puntos de venta-cotacto-correo//
@@ -54,6 +46,15 @@ $.getJSON("eventos.json", function(data) {
         var html = template(val);
         console.log(html);
         $("#correo").append(html);
+
+    });
+    //que dicen nuestros clientes//
+ var clientes = $("#clientestemplate").html();
+  var template = Handlebars.compile(clientes);
+    $.each(data.cliente, function(key, val) {
+        var html = template(val);
+        console.log(html)
+        $("#clientes").append(html);
 
     });
 

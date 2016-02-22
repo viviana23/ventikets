@@ -1,4 +1,4 @@
-    $icon-font-path: '../fonts/';
+$icon-font-path: '../fonts/';
     // bower:scss
     @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
     // endbower
@@ -7,9 +7,10 @@
         font-family: 'Open Sans', sans-serif !important;
         font-size: 14px !important;
     }
-    /*! imagen con blur de ver evento */
 
-@mixin tamaño_imagenes($ancho,$alto,$min-ancho,$min-alto,$max-ancho,$max-alto){
+
+    /*MIXINS*/
+    @mixin tamaño_imagenes($ancho,$alto,$min-ancho,$min-alto,$max-ancho,$max-alto){
         width: $ancho; 
         height: $alto;
         min-width: $min-ancho;
@@ -18,78 +19,30 @@
         max-height: $max-alto;
        
     }
-    
-    img.entrada {
 
-        @include tamaño_imagenes(100%,100%,300px,468px,300px,468px);
-       
+/*/ elementos Barra nav/*/
+    .barra-nav {
+        background-color: #222222;
+        max-width: 1000px;
+    }
+
+     .boton-ingresar {
+        color: $amarillo;
+        margin-top: 5px;
+        background: transparent;
+    }
+
+    .margen-superior {
+        margin-top: 10px;
     }
 
 
+    /*cabecera incio:*/
+    .ancho-maximo {
+        max-width: 1000px;
+    }
 
-    /*! imagen pequeña de ver evento */
-
-    
-    
-    img.evento {
-        position: relative;
-        margin-top: -675px;
-        margin-left: 8.5px;
-        @include tamaño_imagenes(100%,100%,283px,280px,283px,280px);
-        
-      
-    }
-    /*! imagen   */
-    
-    img.cabecera {
-        margin-top:30px;
-        min-width: 934px;
-        min-height: 257px;
-        max-height: 257px;
-        max-width: 934px;
-    }
-    /*! imagen fecha-hora-lugar en evento.html*/
-   
-    img.detalle {
-        width: 100%;
-        height: 100%;
-        max-height: 370px;
-        max-width: 380px;
-    }
-    /*! imagen hoy y agotado*/
-    
-    img.status {
-        margin-top: -915px;
-    }
-    /*! separacion entre ellas, imagen de redes sociales de pie de pagina*/
-    
-    img.desplazada {
-        margin-left: 8px;
-    }
-    /*! imagen fecha-hora-lugar evento en movil*/
-    
-    img.movil {
-        min-width: 120px;
-        min-height: 100px;
-        max-height: 100px;
-        max-width: 120px;
-        margin-top: 20px;
-    }
-    
-    .redes-movil {
-        margin-top: 15px;
-        margin-left: 5px;
-    }
-    /*!fotos que dicen nuestros clientes*/
-    img.foto {
-        min-width: 80px;
-        min-height: 80px;
-        max-height: 80px;
-        max-width: 80px;
-    }
-    /*! imagen que contiene botones deportes,musica,teatro*/
-    
-    .header-principal img {
+     .cabecera img {
         width: 100%;
         height: 100%;
         max-height: 280px;
@@ -98,301 +51,16 @@
         background-size: cover;
         margin-top: 30px;
     }
-    
-    button {
-        font-size: 14px;
-        font-weight: bold;
-    }
-    /*! bajar imagenes y textos*/
-    
-    .margen-superior {
-        margin-top: 10px;
-    }
-    
-    .bajar40 {
-        margin-top: 40px;
-    }
-    
-    .bajar20 {
-        margin-top: 20px;
-    }
-    
-    .bajar5 {
-        margin-top: 5px;
-    }
-    
-    .bajar8 {
-        margin-top: 8px;
-    }
-    
-    .bajar80 {
-        margin-top: 80px;
-    }
-    
-    .bajar60 {
-        margin-top: 60px;
-    }
-    /*! */
-    
-    .leer-datosperson {
-        border: none;
-    }
-    /*! margenes izquierdos de textos e imagenes*/
-    
-    .derecha30 {
-        margin-left: 30px;
-    }
-    
-    .derecha20 {
-        margin-left: 20px;
-    }
-    
-    .derecha10 {
-        margin-left: 10px;
-    }
-    
-    .padding5 {
-        padding-left: 5px;
-    }
-    
-    .derecha100 {
-        padding-left: 100px;
-    }
-    /*!  margenes derechos de textos e imagenes*/
-    
-    .izquierda10 {
-        margin-right: 10px;
-    }
-    
-    .izquierda15 {
-        margin-right: 15px;
-    }
-    .izquierda5 {
-        margin-right: 5px;
-    }
-    /*! */
-    
-    img.panel10 {
-        padding-left: 10px;
-    }
-    
-    img.fotos-lugar {
-        width: 335px;
-        height: 140px;
-    }
-    
-    .selecclugar {
-        background-color: black;
-        width: 320px;
-        padding-left: 10px;
-        color: white;
-    }
-    
-    .alto-panel {
-        height: 595px;
-    }
-    
-    .color-tabla {
-        background: $gris-tabla;
-    }
-    /*! ocultar div*/
-    
-    .ocultar-div {
-        display: none;
-    }
-    
-    // boton ingresar en nav
-    .boton-ingresar {
-        color: $amarillo;
-        margin-top: 5px;
-        background: transparent;
-    }
-    /*! color de nav*/
-    
-    .color-nav {
-        background-color: #222222;
-    }
-    
-    //titulos principales
-    .titulos {
-        font-size: 24px;
-        font-weight: bold;
-    }
-    /*! ancho maximo de 1000 de container*/
-    
-    .principal {
-        max-width: 1000px;
-    }
-    /*! color gris de container(puntos de venta-correo-contactos)*/
-    
-    .principal-fin {
-        background-color: #EAE5E5;
-    }
-    
-    .bajar-rumbon {
-        margin-top: 150px;
-    }
-    
-    .informacion {
-        color: white;
-        font-size: 16px;
-    }
-    
-    .img-responsive.img-center {
-        margin: 0 auto;
-    }
-    
-    .subir {
-        margin-top: -30px;
-    }
-    
-    .subir-entrada {
-        margin-top: -190px;
-    }
-    
-    .contenedor {
-        text-align: center;
-        height: 200px;
-    }
-    
-    .hoy h2 {
-        margin-top: -222px;
-        font-size: 24px;
-        font-weight: bold;
-        color: $amarillo;
-    }
-    
-    .vive h1 {
-        margin-top: -200px;
-        font-size: 24px;
-        font-weight: bold;
-        color: $amarillo;
-    }
-    
-    h3 {
-        color: #0B0505;
-    }
-    
-    h4 {
-        color: black;
-        height: 60px;
-        font-size: 16px;
-        font-weight: bold;
-    }
-    
-    h5 {
-        color: $amarillo;
-        height: 50px;
-        padding-top: -150px;
-        padding-left: 55px;
-        font-size: 12px;
-        font-weight: bold;
-    }
-    
-    .clientes h6 {
-        font-size: 30px;
-        color: #8E8383;
-    }
-    
-    .detalles{
-color: black;
-        font-size: 16px;
 
-    }
-    .datos {
-        @extend .detalles;
-        font-weight: bold;
+    header.container-fluid {
+        background-image: url(../images/Bitmap2.png);    
+        border-image: 0%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 309px;
     }
 
-    
-    .showInfo h3 {
-        font-size: 12px;
-        font-weight: bold;
-    }
-    
-    .ver {
-        color: $amarillo;
-        padding-top: -135px;
-        padding-left: -15px;
-        padding-right: 15px;
-        font-size: 16px;
-        font-weight: bold;
-    }
-    
-    //estilo botones e imagenes pequeñas
-    .boton {
-        background-color: $amarillo;
-        margin-left: 40px;
-    }
-    
-    .fa,
-    .btn {
-        color: white;
-    }
-    
-    .fa2 {
-        color: $amarillo;
-        background-color: #FFFFFF;
-    }
-    
-    .faa {
-        color: $amarillo;
-    }
-    /*!iconos telefono-correo-ubicacion*/
-    
-    .fab {
-        color: $rojo-principal;
-    }
-    
-    .font-negro {
-        background: $negro;
-    }
-    //separador negro horizontal en movil//
-    .divider {
-        margin-top: 5px;
-        height: 1px;
-        margin-left: 20px;
-        display: block;
-        overflow: hidden;
-        background-color: #130505;
-    }
-    
-    .max-panel {
-        width: 300px;
-    }
-
-    
-    /*! linea vertical en desktop en pie de pagina*/
-     
-    .divider-white-vertical {
-        margin-top: -80px;
-        height: 80px;
-        border-right: 1px solid #f2f2f2;
-        margin-right: -15px;
-    }
-    
-    .divisor {
-        margin-top: -55px;
-    }
-    /*! */
-    
-    .bajar {
-        margin-top: 30px;
-    }
-    
-    .bajar-boton {
-        margin-top: 5px;
-        margin-left: 220px;
-    }
-    
-    .center-block {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-
-@mixin icono-footer ($displa,$paddin,$margi,$mar-left,$mar-top){
+    @mixin icono-cabecera($displa,$paddin,$margi,$mar-left,$mar-top){
 
         display: $displa;
         padding:$paddin;
@@ -400,175 +68,52 @@ color: black;
         margin-left: $mar-left;
         margin-top:$mar-top;
 
-}
+    }
 
     .iconos img {
-        @include icono-footer(inline-block, 0px 12px, 0px 8px,105px,-310px);
+        @include icono-cabecera(inline-block, 0px 12px, 0px 8px,105px,-310px);
        
     }
     
 
 
     .icono-boton {
-        @include icono-footer(inline-block, 0px 12px, 0px 8px,-5px,-310px);
+        @include icono-cabecera(inline-block, 0px 12px, 0px 8px,-5px,-310px);
         background: transparent;
         color: white;
     }
+
     
-    .panel-datos {
-        margin-left: 100px;
-    }
-  ///////////////////////////////////////////////////////////////////////7  
-    @media all and (max-width: 1200px) {
-        .iconos img {
-            @include icono-footer(inline-block, 0px 6px, 0px 2px,80px,-310px);
-           
-        }
-        .icono-boton {
-          
-             @include icono-footer(inline-block,0px 6px, 0px 2px,5px,-310px);
-            background: transparent;
-            color: white;
-        }
-        .panel-datos {
-            margin-left: 50px;
-        }
-        .centrar {
-            margin-left: 10px;
-        }
-    }
+    /*cabecera fin: */
+
     
-    @media all and (max-width: 842px) {
-        .iconos img {
-            @include icono-footer(inline-block, 0px 3px, 0px 2px,65px,-310px);
-           
-        }
-        .icono-boton {
-         
-             @include icono-footer(inline-block, 0px 3px, 0px 2px,5px,-310px);
-            background: transparent;
-            color: white;
-        }
-        .local-text {
-            margin-top: -30px;
-        }
-        .local img {
-            margin-top: -160px;
-        }
-        .subir-pie {
-            margin-top: -80px;
-        }
-        .contenedor {
-            text-align: center;
-            height: 80px;
-        }
-        .subir-text {
-            margin-top: 5px;
-        }
-        .panel-datos {
-            margin-left: 250px;
-        }
-        .centrar {
-            margin-left: 250px;
-        }
-        //linea blanca horizontal en movil en pie de pagina//
-        .divider-white {
-        margin-top: -80px;
-        height: 2px;
-        max-width: 30%;
-        display: block;
-        overflow: hidden;
+    /*footer*/
+
+    img.footer {
+        margin-top:30px;
+        min-width: 934px;
+        min-height: 257px;
+        max-height: 257px;
+        max-width: 934px;
+    }
+
+/*boton ver mas eventos*/
+    
+    .texto-ver {
+        color: $amarillo;
+    }
+
+    .ver-mas {
+       @extend .texto-ver;
         background-color: #FFFFFF;
- }
-    }
-    
-    @media all and (max-width: 520px) {
-        .iconos img {
-            
-            @include icono-footer(block, 0px, 0px, 145px,-100px);
-            
-            float: none;
-            text-align: left;
-        
-        }
-        .icono-boton {
-         
-             @include icono-footer(inline-block, 0px 3px, 0px 2px,195px,-60px);
-            background: transparent;
-            color: white;
-        }
-        .bajar-boton {
-            margin-top: -5px;
-            margin-left: 80px;
-        }
-        .centrar {
-            margin-left: 150px;
-        }
-        .panel-datos {
-            margin-left: 50px;
-        }
-        //linea blanca horizontal en movil en pie de pagina//
-         .divider-white {
-        margin-top: -80px;
-        height: 2px;
-        max-width: 45%;
-        display: block;
-        overflow: hidden;
-        background-color: #FFFFFF;
- }
     }
 
 
+    /*contenedor eventos desktop*/
 
- ///////////////////////////////////////////////////   
-    
-    .margenes {
-        margin-left: 120px;
-        margin-right: 100px;
-    }
-    
-
-    .desenfoque {
-        overflow: hidden;
-        -moz-overflow: hidden;
-        display: inline-block;
-        -webkit-filter: blur(100px);
-        -moz-filter: blur(100px);
-        -o-filter: blur(100px);
-        -ms-filter: blur(100px);
-        filter: blur(100px);
-
-        z-index: -1;
-    }
-    
-    .desenfoque:before {
-        -webkit-filter: blur(2px);
-
--moz-filter: blur(2px); 
--o-filter: blur(2px); 
--ms-filter: blur(2px); 
-        filter: blur(2px);
-        z-index: -1;
-    }
-    
-    // imagen protectora de ancho de pantalla
-    header.container-fluid {
-
-
-        background-image: url(../images/Bitmap2.png);
-         
-        border-image: 0%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 309px;
-    }
-
-    
-    
-    //opacidad oscura de entrada en index.html y de fotografias del evento en evento.html 
-    .opacidad,
+.opacidad,
     .opacidad2,
-    .relativo {
+    {
         position: relative;
     }
     
@@ -589,21 +134,331 @@ color: black;
         height: 468px;
         top: 30px;
     }
-    
-    // estilo de campos de textos en evento.html 
-    .inputt {
-        font: .9em/1.5em "handwriting";
-        border-color: #BAB4B4;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        padding: 0 10px;
-        margin: 0;
-        width: 240px;
-        background: none;
+
+
+
+    .desenfoque {
+         margin-top: 30px;
+        overflow: hidden;
+        -moz-overflow: hidden;
+        display: inline-block;
+        -webkit-filter: blur(100px);
+        -moz-filter: blur(100px);
+        -o-filter: blur(100px);
+        -ms-filter: blur(100px);
+        filter: blur(100px);
+        z-index: -1;
     }
     
-    .inputt:focus {
-        border-color: #FF3B00;
-        outline: none;
+    .desenfoque:before {
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px); 
+        -o-filter: blur(2px); 
+        -ms-filter: blur(2px); 
+        filter: blur(2px);
+        z-index: -1;
     }
+
+    img.entrada {
+
+        @include tamaño_imagenes(100%,100%,300px,468px,300px,468px);
+       
+    }
+ 
+    img.evento {
+        position: relative;
+        margin-top: -675px;
+        margin-left: 8.5px;
+        @include tamaño_imagenes(100%,100%,283px,280px,283px,280px);
+        
+      
+    }
+    img.status {
+        margin-top: -915px;
+        position: relative;
+    }
+
+    .subir-entrada {
+        margin-top: -190px;
+         position: relative;
+         margin-left: 10px;
+
+    }
+    
+
+     h2 {
+        margin-top: -222px;
+        font-size: 24px;
+        font-weight: bold;
+        color: $amarillo;
+    }
+    
+    h1 {
+        margin-top: -200px;
+        font-size: 24px;
+        font-weight: bold;
+        color: $amarillo;
+    }
+
+
+    .icono-evento1 {
+        color: $amarillo;
+         margin-right: 10px;
+    }
+
+    .icono-evento2 {
+        @extend .icono-evento1;
+         margin-right: 15px;
+    }
+
+
+    .datos-evento {
+        color: white;
+        font-size: 16px;
+    }
+
+   
+     img.panel10 {
+        padding-left: 10px;
+    }
+     
+
+    .boton {
+        color: white;
+        background-color: $amarillo;
+        margin-left: 40px;
+    }
+/*contenedor de eventos movil*/
+     
+img.movil {
+        min-width: 120px;
+        min-height: 100px;
+        max-height: 100px;
+        max-width: 120px;
+        margin-top: 20px;
+    }
+.redes-movil {
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+
+    h3 {
+        font-size: 12px;
+        font-weight: bold;
+    }
+     
+
+     .divider {
+        margin-top: 5px;
+        height: 1px;
+        margin-left: 20px;
+        display: block;
+        overflow: hidden;
+        background-color: #130505;
+    }
+
+    .boton-movil {
+        @extend .boton;
+        margin-top: 5px;
+        margin-left: 120px;
+    }
+
+.icono-eventomovil {
+        color: $amarillo;
+    }
+
+
+    /*contenedor que dicen nuestros clientes*/
+
+
+    .contenedor-clientes {
+        background-color: #EAE5E5;
+         margin-top: 30px;
+
+    }
+
+    .margenes {
+        margin-left: 120px;
+        margin-right: 100px;
+    }
+
+    #puntos,#correo,#clientes{
+ margin-top: 30px;
+
+    }
+
+     h6 {
+        font-size: 30px;
+        color: #8E8383;
+        text-align: center;
+        
+    }
+.color-icono {
+        color: $rojo-principal;
+    }
+
+
+    
+    .datos {
+       color: black;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+     img.foto {
+        min-width: 80px;
+        min-height: 80px;
+        max-height: 80px;
+        max-width: 80px;
+    }
+
+    /*pie de pagina*/
+
+    .font-negro {
+        background: $negro;
+
+    }
+
+     .pie{
+        color: white;
+        text-align:center;
+        margin-top:30px;
+    }
+
+    .redes-pie{
+margin-top:60px;
+
+    }
+
+    .alto-pie {
+        text-align: center;
+        height: 200px;
+    }
+
+     
+    .divider-white-vertical {
+        margin-top: -80px;
+        height: 80px;
+        border-right: 1px solid #f2f2f2;
+        margin-right: -15px;
+    }
+
+     .divisor {
+        margin-top: -60px;
+    }
+
+
+
+/*! imagen fecha-hora-lugar en evento.html*/
+   
+    img.detalle {
+        width: 100%;
+        height: 100%;
+        max-height: 370px;
+        max-width: 380px;
+    }
+
+    #descripcion-evento{
+margin-top:80px;
+
+    }
+
+    img.fotos-lugar {
+        width: 335px;
+        height: 140px;
+         position: relative;
+    margin-top:30px;
+
+    }
+
+ /*detalle de evento*/   
+ .titulo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+
+
+
+    /*media querys*/
+ @media all and (max-width: 1200px) {
+        .iconos img {
+            @include icono-cabecera(inline-block, 0px 6px, 0px 2px,80px,-310px);
+           
+        }
+        .icono-boton {
+          
+             @include icono-cabecera(inline-block,0px 6px, 0px 2px,5px,-310px);
+            background: transparent;
+            color: white;
+        }
+        
+        .centrar-evento {
+            margin-left: 10px;
+            margin-top:30px;
+        }
+    }
+
+
+    @media all and (max-width: 842px) {
+        .iconos img {
+            @include icono-cabecera(inline-block, 0px 3px, 0px 2px,65px,-310px);
+           
+        }
+        .icono-boton {
+         
+             @include icono-cabecera(inline-block, 0px 3px, 0px 2px,5px,-310px);
+            background: transparent;
+            color: white;
+        }
+
+        .subir-texto1 {
+            margin-top: -30px;
+        }
+
+        .subir-iconos img {
+            margin-top: -100px;
+        }
+
+         .subir-texto2 {
+            margin-top: -40px;
+        }
+        
+        //linea blanca horizontal en movil en pie de pagina//
+        .divider-white {
+        margin-top: -30px;
+        height: 2px;
+        max-width: 30%;
+        display: block;
+        overflow: hidden;
+        background-color: #FFFFFF;
+ }
+    }
+    
+    @media all and (max-width: 520px) {
+        .iconos img {
+            
+            @include icono-cabecera(block, 0px, 0px, 145px,-100px);
+            
+            float: none;
+            text-align: left;
+        
+        }
+        .icono-boton {
+         
+             @include icono-cabecera(inline-block, 0px 3px, 0px 2px,195px,-60px);
+            background: transparent;
+            color: white;
+        }
+       
+        //linea blanca horizontal en movil en pie de pagina//
+         .divider-white {
+        margin-top: -30px;
+        height: 2px;
+        max-width: 45%;
+        display: block;
+        overflow: hidden;
+        background-color: #FFFFFF;
+ }
+    }
+
